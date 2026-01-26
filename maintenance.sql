@@ -41,7 +41,6 @@ CREATE TABLE Intervenir(
    Id_Intervention INT,
    Id_statut INT,
    date_intervention DATE,
-   statut VARCHAR(50),
    description VARCHAR(255),
    PRIMARY KEY(Id_Technicien, Id_Batiment, Id_Intervention, Id_statut),
    FOREIGN KEY(Id_Technicien) REFERENCES Technicien(Id_Technicien),
@@ -134,3 +133,4 @@ INSERT INTO Qualification (qualification) VALUES
 ('Formation Contrôle qualité des installations'),
 ('Certification Installation et maintenance photovoltaïque'),
 ('Certification Installation panneaux solaires thermiques');
+
