@@ -1,11 +1,8 @@
 Manifest-Version: 1.0
-Built-By: hugom
-Build-Jdk: 21.0.8
+Build-Jdk-Spec: 21
 Implementation-Title: Spring Boot Docker Blank Project (from https://git
  hub.com/making/spring-boot-docker-blank)
 Implementation-Version: 0.0.1-SNAPSHOT
-Implementation-Vendor-Id: Projet
-Implementation-Vendor: Pivotal Software, Inc.
 Main-Class: Projet.Application.App
 Created-By: Maven Integration for Eclipse
 
