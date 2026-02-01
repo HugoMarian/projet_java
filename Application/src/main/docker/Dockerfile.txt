@@ -1,4 +1,4 @@
-FROM dockerfile/java:oracle-java8
+FROM dockerfile/java:oracle-java21
 
 VOLUME /tmp
 ADD Application.jar /opt/Application/
