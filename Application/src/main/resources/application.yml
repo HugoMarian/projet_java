@@ -2,3 +2,17 @@
 spring:
   thymeleaf.cache: false
   main.show-banner: false
+
+  docker:
+    compose:
+      enabled: true
+      lifecycle-management: start_only
+      skip:
+        in-tests: false
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
