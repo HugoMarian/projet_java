@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="360.0" prefWidth="484.0" spacing="10" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Projet.Application.MainController">
+    <Button fx:id="btnTech" prefHeight="25.0" prefWidth="134.0" text="Gérer les techniciens" />
+   <Button fx:id="btnInterv" prefHeight="25.0" prefWidth="137.0" text="Gérer les interventions" />
+   <Button fx:id="btnBat" prefHeight="25.0" prefWidth="135.0" text="Gérer les bâtiments" />
+</VBox>
