@@ -1,6 +1,7 @@
 CREATE TABLE Technicien(
    Id_Technicien INT AUTO_INCREMENT,
    nom VARCHAR(50),
+   prenom VARCHAR(50),
    PRIMARY KEY(Id_Technicien)
 );
 
@@ -66,6 +67,37 @@ CREATE TABLE qualifie(
    FOREIGN KEY(Id_Qualification) REFERENCES Qualification(Id_Qualification)
 );
 
+INSERT INTO Technicien (nom, prenom) VALUES
+('Martin', 'Lucas'),
+('Bernard', 'Claire'),
+('Dubois', 'Julien'),
+('Petit', 'Sophie'),
+('Robert', 'Maxime'),
+('Richard', 'Camille'),
+('Durand', 'Emma'),
+('Moreau', 'Alexandre'),
+('Simon', 'Julie'),
+('Laurent', 'Clément'),
+('Lefebvre', 'Marine'),
+('Michel', 'Baptiste'),
+('Garcia', 'Laura'),
+('David', 'Paul'),
+('Bertrand', 'Alice'),
+('Roux', 'Sébastien'),
+('Vincent', 'Sarah'),
+('Fournier', 'Benjamin'),
+('Morel', 'Élise'),
+('Girard', 'Louis'),
+('Andre', 'Chloé'),
+('Leroy', 'Guillaume'),
+('Marchand', 'Manon'),
+('Perez', 'Inès'),
+('Leclerc', 'Samuel'),
+('Gauthier', 'Nina'),
+('Chevalier', 'Loïc'),
+('Francois', 'Anaïs'),
+('Legrand', 'Corentin'),
+('Perrin', 'Mathilde');
 
 INSERT INTO Avancement (statut) VALUES ('Planifiée'),('En cours'),('Terminée');
 
