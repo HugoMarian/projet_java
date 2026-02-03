@@ -4,7 +4,7 @@ services:
     container_name: mysql_projet
     restart: unless-stopped
     environment:
-      MYSQL_DATABASE: projet
+      MYSQL_DATABASE: projet_db
       MYSQL_USER: projet
       MYSQL_PASSWORD: projet
       MYSQL_ROOT_PASSWORD: root

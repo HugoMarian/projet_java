@@ -1,7 +1,9 @@
 # See http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
 spring:
-  thymeleaf.cache: false
-  main.show-banner: false
+  thymeleaf:
+    cache: false
+  main:
+    show-banner: false
 
   docker:
     compose:
@@ -9,15 +11,18 @@ spring:
       lifecycle-management: start_only
       skip:
         in-tests: false
+
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
+    open-in-view: false
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQLDialect
+
   datasource:
-    url: jdbc:mysql://localhost:3306/projet
+    url: jdbc:mysql://localhost:3306/projet_db?useSSL=false&serverTimezone=UTC
     username: projet
     password: projet
     driver-class-name: com.mysql.cj.jdbc.Driver
