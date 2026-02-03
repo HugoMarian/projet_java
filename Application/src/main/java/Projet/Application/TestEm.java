@@ -3,6 +3,7 @@ package Projet.Application;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 
+import Projet.Application.entities.Technicien;
 import Projet.Application.repositories.TechnicienRepository;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;

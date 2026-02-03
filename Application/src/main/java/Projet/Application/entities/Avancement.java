@@ -1,7 +1,7 @@
 /**
  * 
  */
-package Projet.Application;
+package Projet.Application.entities;
 
 import java.io.Serializable;
 
@@ -14,7 +14,7 @@ import jakarta.persistence.Id;
  */
 
 @Entity
-public class Qualification implements Serializable {
+public class Avancement implements Serializable {
 /**
  * 
  */
@@ -22,11 +22,11 @@ public class Qualification implements Serializable {
 	@GeneratedValue
 	private int id;
 	
-	private String qualification;
+	private String statut;
 	
 	private static final long serialVersionUID = 1L;
 	
-	public Qualification() {
+	public Avancement() {
 		super();
 	}
 
@@ -38,12 +38,12 @@ public class Qualification implements Serializable {
 	    this.id = id;
 	}
 
-	public String getQualification() {
-	    return this.qualification;
+	public String getStatut() {
+	    return this.statut;
 	}
 
-	public void setQualification(String qualification) {
-	    this.qualification = qualification;
+	public void setStatut(String statut) {
+	    this.statut = statut;
 	}
 
 }

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package Projet.Application;
+package Projet.Application.entities;
 
 import java.io.Serializable;
 
@@ -14,7 +14,7 @@ import jakarta.persistence.Id;
  */
 
 @Entity
-public class Intervention implements Serializable {
+public class Qualification implements Serializable {
 /**
  * 
  */
@@ -22,11 +22,11 @@ public class Intervention implements Serializable {
 	@GeneratedValue
 	private int id;
 	
-	private String typeIntervention;
+	private String qualification;
 	
 	private static final long serialVersionUID = 1L;
 	
-	public Intervention() {
+	public Qualification() {
 		super();
 	}
 
@@ -38,12 +38,12 @@ public class Intervention implements Serializable {
 	    this.id = id;
 	}
 
-	public String getTypeIntervention() {
-	    return this.typeIntervention;
+	public String getQualification() {
+	    return this.qualification;
 	}
 
-	public void setTypeIntervention(String typeIntervention) {
-	    this.typeIntervention = typeIntervention;
+	public void setQualification(String qualification) {
+	    this.qualification = qualification;
 	}
 
 }
