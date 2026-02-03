@@ -56,10 +56,6 @@
 	        <artifactId>javafx-fxml</artifactId>
 	        <version>${javafx.version}</version>
 	    </dependency>
-        <dependency>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>exec-maven-plugin</artifactId>
-        </dependency>
     </dependencies>
     <build>
         <finalName>${project.artifactId}</finalName>
