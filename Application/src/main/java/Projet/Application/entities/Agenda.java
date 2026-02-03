@@ -25,7 +25,7 @@ public class Agenda implements Serializable {
 	@GeneratedValue
 	private Integer id;
 	
-	@Column
+	@Column(name = "date_disponibilite")
 	private Calendar dateDisponibilite;
 	
 	private static final long serialVersionUID = 1L;
@@ -34,7 +34,7 @@ public class Agenda implements Serializable {
 		super();
 	}
 
-	public int getId() {
+	public Integer getId() {
 	    return this.id;
 	}
 

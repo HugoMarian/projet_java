@@ -7,19 +7,25 @@ import java.io.Serializable;
 import java.util.Objects;
 
 import jakarta.persistence.Embeddable;
+import jakarta.persistence.Column;
 
 @Embeddable
 public class IntervenirPK implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
-    private int idTechnicien;
-    private int idBatiment;
-    private int idIntervention;
-    private int idStatut;
+
+    @Column(name = "Id_Technicien", table="Technicien")
+    private Integer idTechnicien;
+    @Column(name = "Id_Batiment", table="Batiment")
+    private Integer idBatiment;
+    @Column(name = "Id_Intervention", table="Intervention")
+    private Integer idIntervention;
+    @Column(name = "Id_Statut", table="Statut")
+    private Integer idStatut;
 
     public IntervenirPK() {}
 
-    public IntervenirPK(int idTechnicien, int idBatiment, int idIntervention, int idStatut) {
+    public IntervenirPK(Integer idTechnicien, Integer idBatiment, int idIntervention, int idStatut) {
         this.idTechnicien = idTechnicien;
         this.idBatiment = idBatiment;
         this.idIntervention = idIntervention;

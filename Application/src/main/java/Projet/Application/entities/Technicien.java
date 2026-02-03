@@ -22,12 +22,12 @@ public class Technicien implements Serializable {
  */
 	@Id
 	@GeneratedValue
-	private int id;
+	private Integer id;
 	
-	@Column
+	@Column(name = "prenom")
 	private String prenom;
 	
-	@Column
+	@Column(name = "nom")
 	private String nom;
 	private static final long serialVersionUID = 1L;
 	
@@ -35,7 +35,7 @@ public class Technicien implements Serializable {
 		super();
 	}
 
-	public int getId() {
+	public Integer getId() {
 	    return this.id;
 	}
 

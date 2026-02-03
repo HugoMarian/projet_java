@@ -22,9 +22,9 @@ public class Qualification implements Serializable {
  */
 	@Id
 	@GeneratedValue
-	private int id;
+	private Integer id;
 	
-	@Column
+	@Column(name = "qualification")
 	private String qualification;
 	
 	private static final long serialVersionUID = 1L;
@@ -33,7 +33,7 @@ public class Qualification implements Serializable {
 		super();
 	}
 
-	public int getId() {
+	public Integer getId() {
 	    return this.id;
 	}
 

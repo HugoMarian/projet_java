@@ -22,13 +22,13 @@ public class Intervenir implements Serializable{
     @EmbeddedId
     private IntervenirPK id;
 
-    @Column
+    @Column(name = "date_intervention")
     private Calendar dateIntervention;
 
-    @Column
+    @Column(name = "statut")
     private String statut;
 
-    @Column
+    @Column(name = "description")
     private String description;
 
     private static final long serialVersionUID = 1L;

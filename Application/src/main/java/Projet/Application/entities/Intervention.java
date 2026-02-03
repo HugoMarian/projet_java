@@ -22,9 +22,9 @@ public class Intervention implements Serializable {
  */
 	@Id
 	@GeneratedValue
-	private int id;
+	private Integer id;
 	
-	@Column
+	@Column(name = "type_intervention")
 	private String typeIntervention;
 	
 	private static final long serialVersionUID = 1L;
@@ -33,7 +33,7 @@ public class Intervention implements Serializable {
 		super();
 	}
 
-	public int getId() {
+	public Integer getId() {
 	    return this.id;
 	}
 

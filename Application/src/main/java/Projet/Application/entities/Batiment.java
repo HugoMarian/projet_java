@@ -10,6 +10,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.Column;
 /**
  * 
  */
@@ -24,8 +25,10 @@ public class Batiment implements Serializable {
 	@GeneratedValue
 	private Integer id;
 	
+	@Column(name = "localisation")
 	private String localisation;
 	
+	@Column(name = "nom")
 	private String nom;
 	private static final long serialVersionUID = 1L;
 	
@@ -33,7 +36,7 @@ public class Batiment implements Serializable {
 		super();
 	}
 
-	public int getId() {
+	public Integer getId() {
 	    return this.id;
 	}
 

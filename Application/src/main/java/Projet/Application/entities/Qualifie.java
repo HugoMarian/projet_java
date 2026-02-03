@@ -15,7 +15,7 @@ public class Qualifie implements Serializable {
 
     @Id
     @GeneratedValue
-    private int id;
+    private Integer id;
     
     private static final long serialVersionUID = 1L;
 

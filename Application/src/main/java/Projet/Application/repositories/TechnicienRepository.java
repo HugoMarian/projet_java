@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import Projet.Application.entities.Technicien;
 
 public interface TechnicienRepository extends JpaRepository<Technicien, Integer>{
-	public int getId();
+	public Integer getId();
 	public void setId(int id);
 	public String getPrenom();
 	public void setPrenom(String prenom);
