@@ -7,8 +7,8 @@ import java.util.List;
 import java.util.Calendar;
 
 public interface IntervenirRepository extends JpaRepository<Intervenir, Integer>{
-    Intervenir findId(int id);
-    Intervenir findStatut(String statut);
+    Intervenir findById(int id);
+    Intervenir findByStatut(String statut);
     Intervenir findDesc(String description);
 	Intervenir findDateInterv(Calendar dateIntervention);
     

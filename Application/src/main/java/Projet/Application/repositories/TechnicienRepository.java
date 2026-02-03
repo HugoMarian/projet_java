@@ -6,9 +6,9 @@ import Projet.Application.entities.Technicien;
 import java.util.List;
 
 public interface TechnicienRepository extends JpaRepository<Technicien, Integer>{
-	Technicien findId(int id);
-	Technicien findNom(String nom);
-	Technicien findPrenom(String prenom);
+	Technicien findById(int id);
+	Technicien findByNom(String nom);
+	Technicien findByPrenom(String prenom);
 
 	List<Technicien> findAll();
 }

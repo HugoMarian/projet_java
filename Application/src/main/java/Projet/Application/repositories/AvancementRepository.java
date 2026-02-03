@@ -6,8 +6,8 @@ import Projet.Application.entities.Avancement;
 import java.util.List;
 
 public interface AvancementRepository extends JpaRepository<Avancement, Integer>{
-    Avancement findId(int id);
-	Avancement findStatut(String statut);
+    Avancement findById(int id);
+	Avancement findByStatut(String statut);
     
     List<Avancement> findAll();
 }

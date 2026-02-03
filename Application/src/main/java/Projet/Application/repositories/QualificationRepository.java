@@ -6,8 +6,8 @@ import Projet.Application.entities.Qualification;
 import java.util.List;
 
 public interface QualificationRepository extends JpaRepository<Qualification, Integer>{
-    Qualification findId(int id);
-	Qualification findQualif(String qualification);
+    Qualification findById(int id);
+	Qualification findByQualification(String qualification);
     
     List<Qualification> findAll();
 }

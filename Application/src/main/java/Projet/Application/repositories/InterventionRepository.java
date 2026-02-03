@@ -6,7 +6,7 @@ import Projet.Application.entities.Intervention;
 import java.util.List;
 
 public interface InterventionRepository extends JpaRepository<Intervention, Integer>{
-    Intervention findId(int id);
+    Intervention findById(int id);
 	Intervention findTypeInterv(String typeIntervention);
 
     List<Intervention> findAll();

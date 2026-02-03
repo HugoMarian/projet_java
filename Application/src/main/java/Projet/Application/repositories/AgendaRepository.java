@@ -7,8 +7,8 @@ import java.util.List;
 import java.util.Calendar;
 
 public interface AgendaRepository extends JpaRepository<Agenda, Integer>{
-    Agenda findId(int id);
-	Agenda findDateDispo(Calendar dateDisponibilite);
+    Agenda findById(int id);
+	Agenda findByDateDispo(Calendar dateDisponibilite);
     
     List<Agenda> findAll();
 }

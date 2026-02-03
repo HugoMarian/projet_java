@@ -6,7 +6,7 @@ import Projet.Application.entities.Disponible;
 import java.util.List;
 
 public interface DisponibleRepository extends JpaRepository<Disponible, Integer>{
-    Disponible findId(int id);
+    Disponible findById(int id);
     
     List<Disponible> findAll();
 }
