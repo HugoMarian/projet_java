@@ -18,7 +18,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <start-class>Projet.Application.MainLauncher</start-class>
-        <java.version>21</java.version>
+        <java.version>17</java.version>
         <javafx.version>21.0.1</javafx.version>
         <docker.image.prefix>${user.name}</docker.image.prefix>
     </properties>
@@ -46,7 +46,16 @@
             <artifactId>mysql-connector-j</artifactId>
             <scope>runtime</scope>
         </dependency>
-
+                <dependency>
+	        <groupId>org.openjfx</groupId>
+	        <artifactId>javafx-controls</artifactId>
+	        <version>${javafx.version}</version>
+	    </dependency>
+	    <dependency>
+	        <groupId>org.openjfx</groupId>
+	        <artifactId>javafx-fxml</artifactId>
+	        <version>${javafx.version}</version>
+	    </dependency>
         
     </dependencies>
     <build>
