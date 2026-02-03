@@ -9,18 +9,20 @@ import java.io.Serializable;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 /**
  * 
  */
 
 @Entity
+@Table(schema="projet_db", name="Batiment")
 public class Batiment implements Serializable {
 /**
  * 
  */
 	@Id
 	@GeneratedValue
-	private int id;
+	private Integer id;
 	
 	private String localisation;
 	

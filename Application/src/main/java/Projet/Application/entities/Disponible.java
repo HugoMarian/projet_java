@@ -7,13 +7,15 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(schema="projet_db", name="Disponnible")
 public class Disponible implements Serializable {
 
     @Id
     @GeneratedValue
-    private int id;
+    private Integer id;
     
     private static final long serialVersionUID = 1L;
 

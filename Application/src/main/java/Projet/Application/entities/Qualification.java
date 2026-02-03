@@ -5,15 +5,17 @@ package Projet.Application.entities;
 
 import java.io.Serializable;
 
-
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 /**
  * 
  */
 
 @Entity
+@Table(schema="projet_db", name="Qualification")
 public class Qualification implements Serializable {
 /**
  * 
@@ -22,6 +24,7 @@ public class Qualification implements Serializable {
 	@GeneratedValue
 	private int id;
 	
+	@Column
 	private String qualification;
 	
 	private static final long serialVersionUID = 1L;

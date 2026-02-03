@@ -9,12 +9,14 @@ import java.util.Calendar;
 import jakarta.persistence.Column;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 
 /**
  * 
  */
 
 @Entity
+@Table(schema="projet_db", name="Intervenir")
 public class Intervenir implements Serializable{
 
     @EmbeddedId

@@ -5,15 +5,17 @@ package Projet.Application.entities;
 
 import java.io.Serializable;
 
-
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 /**
  * 
  */
 
 @Entity
+@Table(schema="projet_db", name="Intervention")
 public class Intervention implements Serializable {
 /**
  * 
@@ -22,6 +24,7 @@ public class Intervention implements Serializable {
 	@GeneratedValue
 	private int id;
 	
+	@Column
 	private String typeIntervention;
 	
 	private static final long serialVersionUID = 1L;

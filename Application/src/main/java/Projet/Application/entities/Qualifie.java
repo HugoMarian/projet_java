@@ -7,8 +7,10 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(schema="projet_db", name="Qualifie")
 public class Qualifie implements Serializable {
 
     @Id

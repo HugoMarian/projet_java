@@ -5,23 +5,26 @@ package Projet.Application.entities;
 
 import java.io.Serializable;
 
-
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 /**
  * 
  */
 
 @Entity
+@Table(schema="projet_db", name="Avancement")
 public class Avancement implements Serializable {
 /**
  * 
  */
 	@Id
 	@GeneratedValue
-	private int id;
+	private Integer id;
 	
+	@Column
 	private String statut;
 	
 	private static final long serialVersionUID = 1L;
