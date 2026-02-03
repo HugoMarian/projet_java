@@ -105,7 +105,7 @@
                             <goal>rename</goal>
                         </goals>
                         <configuration>
-                            <sourceFile>${project.build.directory}/docker/Dockerfile.txt</sourceFile>
+                            <sourceFile>${project.build.directory}/docker/Dockerfile</sourceFile>
                             <destinationFile>${project.build.directory}/docker/Dockerfile</destinationFile>
                         </configuration>
                     </execution>
