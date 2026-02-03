@@ -1,7 +1,7 @@
 /**
  * 
  */
-package Projet.Application;
+package Projet.Application.entities;
 
 import java.io.Serializable;
 import java.util.Objects;

@@ -1,9 +1,10 @@
 /**
  * 
  */
-package Projet.Application;
+package Projet.Application.entities;
 
 import java.io.Serializable;
+
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,7 +14,7 @@ import jakarta.persistence.Id;
  */
 
 @Entity
-public class Technicien implements Serializable {
+public class Batiment implements Serializable {
 /**
  * 
  */
@@ -21,12 +22,12 @@ public class Technicien implements Serializable {
 	@GeneratedValue
 	private int id;
 	
-	private String prenom;
+	private String localisation;
 	
 	private String nom;
 	private static final long serialVersionUID = 1L;
 	
-	public Technicien() {
+	public Batiment() {
 		super();
 	}
 
@@ -38,12 +39,12 @@ public class Technicien implements Serializable {
 	    this.id = id;
 	}
 
-	public String getPrenom() {
-	    return this.prenom;
+	public String getLocalisation() {
+	    return this.localisation;
 	}
 
-	public void setPrenom(String prenom) {
-	    this.prenom = prenom;
+	public void setLocalisation(String localisation) {
+	    this.localisation = localisation;
 	}
 
 	public String getNom() {

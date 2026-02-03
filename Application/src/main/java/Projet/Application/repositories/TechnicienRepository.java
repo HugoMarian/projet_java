@@ -1,7 +1,8 @@
 package Projet.Application.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import Projet.Application.Technicien;
+
+import Projet.Application.entities.Technicien;
 
 public interface TechnicienRepository extends JpaRepository<Technicien, Integer>{
 	public int getId();

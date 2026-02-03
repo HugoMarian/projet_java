@@ -1,10 +1,10 @@
 /**
  * 
  */
-package Projet.Application;
+package Projet.Application.entities;
 
 import java.io.Serializable;
-import java.util.Calendar;
+
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -14,7 +14,7 @@ import jakarta.persistence.Id;
  */
 
 @Entity
-public class Agenda implements Serializable {
+public class Intervention implements Serializable {
 /**
  * 
  */
@@ -22,11 +22,11 @@ public class Agenda implements Serializable {
 	@GeneratedValue
 	private int id;
 	
-	private Calendar dateDisponibilite;
+	private String typeIntervention;
 	
 	private static final long serialVersionUID = 1L;
 	
-	public Agenda() {
+	public Intervention() {
 		super();
 	}
 
@@ -38,13 +38,12 @@ public class Agenda implements Serializable {
 	    this.id = id;
 	}
 
-	public Calendar getDateDisponibilite() {
-	    return this.dateDisponibilite;
+	public String getTypeIntervention() {
+	    return this.typeIntervention;
 	}
 
-	public void setDateDisponibilite(Calendar dateDisponibilite) {
-	    this.dateDisponibilite = dateDisponibilite;
+	public void setTypeIntervention(String typeIntervention) {
+	    this.typeIntervention = typeIntervention;
 	}
-
 
 }
