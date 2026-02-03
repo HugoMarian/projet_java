@@ -17,8 +17,9 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <start-class>Projet.Application.App</start-class>
-        <java.version>21.0.8</java.version>
+        <start-class>Projet.Application.MainLauncher</start-class>
+        <java.version>17</java.version>
+        <javafx.version>21.0.1</javafx.version>
         <docker.image.prefix>${user.name}</docker.image.prefix>
     </properties>
 
@@ -45,8 +46,16 @@
             <artifactId>mysql-connector-j</artifactId>
             <scope>runtime</scope>
         </dependency>
-
-        
+        <dependency>
+	        <groupId>org.openjfx</groupId>
+	        <artifactId>javafx-controls</artifactId>
+	        <version>${javafx.version}</version>
+	    </dependency>
+	    <dependency>
+	        <groupId>org.openjfx</groupId>
+	        <artifactId>javafx-fxml</artifactId>
+	        <version>${javafx.version}</version>
+	    </dependency>
     </dependencies>
     <build>
         <finalName>${project.artifactId}</finalName>
@@ -54,6 +63,27 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>3.2.2</version>
+            </plugin> 
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <id>docker-up</id>
+                        <phase>validate</phase> <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <executable>docker-compose</executable>
+                            <arguments>
+                                <argument>up</argument>
+                                <argument>-d</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
                 <groupId>com.spotify</groupId>
@@ -71,7 +101,6 @@
                     </resources>
                 </configuration>
             </plugin>
-            <!-- Copy Dockerfile -->
             <plugin>
                 <artifactId>maven-resources-plugin</artifactId>
                 <executions>
@@ -93,6 +122,14 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+			    <groupId>org.openjfx</groupId>
+			    <artifactId>javafx-maven-plugin</artifactId>
+			    <version>0.0.8</version>
+			    <configuration>
+			        <mainClass>Projet.Application.MainLauncher</mainClass>
+			    </configuration>
+			</plugin>
             <plugin>
                 <groupId>com.coderplus.maven.plugins</groupId>
                 <artifactId>copy-rename-maven-plugin</artifactId>

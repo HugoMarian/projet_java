@@ -1,23 +1,21 @@
 package Projet.Application;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-@SpringBootApplication(
-	    exclude = { DataSourceAutoConfiguration.class }
-		)
-@RestController
-
-public class App {
-    public static void main(String[] args) {
-        SpringApplication.run(App.class, args);
+public class App extends Application {
+    @Override
+    public void start(Stage stage) throws Exception {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/MainView.fxml"));
+        Scene scene = new Scene(loader.load(), 400, 300);
+        stage.setScene(scene);
+        stage.setTitle("Application Maintenance");
+        stage.show();
     }
 
-    @RequestMapping(value = "/")
-    String hello() {
-        return "Hello World!";
+    public static void main(String[] args) {
+        launch();
     }
 }
